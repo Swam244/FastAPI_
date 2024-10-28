@@ -5,7 +5,7 @@ from .routers import users,posts,auth,vote
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
-# models.Base.metadata.create_all(bind=engine,checkfirst=True)  # Tables are created only when they do not exist.
+models.Base.metadata.create_all(bind=engine,checkfirst=True)  # Tables are created only when they do not exist.
 
 app = FastAPI()
 

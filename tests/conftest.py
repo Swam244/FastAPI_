@@ -12,8 +12,14 @@ from app.routers import oauth2
 from app import models
 
 dotenv.load_dotenv()
+
+SQLALCHEMY_DB_URL = (f'postgresql://'
+                     f'{settings.database_username}:{settings.database_password}'
+                     f'@{settings.database_hostname}:{settings.database_port}'
+                     f'/{settings.test_database_name}')
+
 SQLALCHEMY_DATABASE_TEST_URL = os.getenv("SQLALCHEMY_DATABASE_TEST_URL")
-engine = create_engine(SQLALCHEMY_DATABASE_TEST_URL)
+engine = create_engine(SQLALCHEMY_DB_URL)
 TestingSessionLocal = sessionmaker(
     autocommit=False, autoflush=False, bind=engine)
 

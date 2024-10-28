@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES : int
     SQLALCHEMY_DATABASE_URL : str
     SQLALCHEMY_DATABASE_TEST_URL : str
+    TEST_DATABASE_NAME : str
     class Config:
         env_file = ".env"
 
