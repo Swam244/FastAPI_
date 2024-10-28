@@ -1,0 +1,12 @@
+name: Build and Deploy Code
+
+on: [push,pull_request]
+
+jobs:
+  job1:
+    runs-on: windows-latest
+    steps:
+      - name: pulling git repo
+        uses: action/checkout@v2
+      - name: say hi
+        uses: echo "Hello World"
