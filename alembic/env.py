@@ -10,7 +10,7 @@ from app.models import Base
 # access to the values within the .ini file in use.
 config = context.config
 config.set_main_option(
-    "sqlalchemy.url","postgresql+psycopg2://postgres:password@postgres:5432/fastapi"
+    "sqlalchemy.url","postgresql+psycopg2://postgres:password@localhost:5432/fastapi"
     )
 
 # Interpret the config file for Python logging.
