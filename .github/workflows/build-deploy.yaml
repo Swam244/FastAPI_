@@ -43,7 +43,7 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: install dependencies
         run: pip install -r requirements.txt
-      # - name: run migrations
-      #   run : alembic upgrade head
+      - name: run migrations
+        run : alembic upgrade head
       - name: Testing with Pytest
         run: pytest -v
