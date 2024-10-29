@@ -17,7 +17,6 @@ jobs:
       ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
       SQLALCHEMY_DATABASE_URL : ${{secrets.SQLALCHEMY_DATABASE_URL}}
       SQLALCHEMY_DATABASE_TEST_URL : ${{secrets.SQLALCHEMY_DATABASE_TEST_URL}}
-      TEST_DATABASE_NAME: fastapi_test 
     services:
       postgres:
         image: postgres
