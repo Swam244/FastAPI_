@@ -5,9 +5,12 @@ from .routers import users,posts,auth,vote
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
-models.Base.metadata.create_all(bind=engine,checkfirst=True)  # Tables are created only when they do not exist.
+# models.Base.metadata.create_all(bind=engine,checkfirst=True)  # Tables are created only when they do not exist.
 
-app = FastAPI()
+SERVER_KEY = settings.SERVER_KEY
+SSL_CERTFILE = settings.SSL_CERTFILE
+
+app = FastAPI(ssl_keyfile = SERVER_KEY ,ssl_certfile= SSL_CERTFILE)
 
 app.add_middleware(
     CORSMiddleware,

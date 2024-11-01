@@ -1,3 +1,10 @@
 __pycache__
 venv/
 .env
+ssl_config/client.crt
+ssl_config/client.csr
+ssl_config/client.key
+ssl_config/server.crt
+ssl_config/server.csr
+ssl_config/server.key
+.vscode/
